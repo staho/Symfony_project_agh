@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5249e6a5-5e0a-4cb7-adb7-ac1aa63b6fae" name="Default" comment="" />
+    <list default="true" id="5249e6a5-5e0a-4cb7-adb7-ac1aa63b6fae" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,19 +35,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="391">
+              <caret line="59" column="78" lean-forward="true" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
               <folding>
-                <element signature="e#1937#1943#1#HTML" expanded="true" />
-                <element signature="e#2312#2318#1#HTML" expanded="true" />
-                <element signature="e#3187#3193#1#HTML" expanded="true" />
-                <element signature="e#3986#3992#1#HTML" expanded="true" />
-                <element signature="e#4785#4791#1#HTML" expanded="true" />
-                <element signature="e#4878#4884#1#HTML" expanded="true" />
+                <element signature="e#1985#1991#1#HTML" expanded="true" />
+                <element signature="e#2356#2362#1#HTML" expanded="true" />
+                <element signature="e#3058#3064#1#HTML" expanded="true" />
+                <element signature="e#3859#3865#1#HTML" expanded="true" />
+                <element signature="e#4660#4666#1#HTML" expanded="true" />
+                <element signature="e#4753#4759#1#HTML" expanded="true" />
+                <element signature="e#5069#5075#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pies1.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/images/pies1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pies2.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/images/pies2.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,8 +88,8 @@
       <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/homepage/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state relative-caret-position="68">
+              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#1005#1011#1#HTML" expanded="true" />
@@ -87,13 +118,17 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/Resources/views/show.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/homepage/show.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AnimalShelterController.php" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       </list>
     </option>
   </component>
@@ -156,6 +191,7 @@
     <option name="width" value="1294" />
     <option name="height" value="1087" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -487,12 +523,12 @@
       <workItem from="1508164965203" duration="18000" />
       <workItem from="1508164994796" duration="71000" />
       <workItem from="1508165073516" duration="2990000" />
-      <workItem from="1508168076008" duration="6648000" />
+      <workItem from="1508168076008" duration="7659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14441000" />
+    <option name="totallyTimeSpent" value="15452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1087" extended-state="0" />
@@ -502,8 +538,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -749,18 +785,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AnimalShelterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-            <element signature="e#122#181#0#PHP" expanded="true" />
-            <element signature="e#449#474#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app_dev.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -769,10 +793,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/images/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/homepage/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#1005#1011#1#HTML" expanded="true" />
@@ -788,24 +833,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/images/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AnimalShelterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#122#181#0#PHP" expanded="true" />
+            <element signature="e#449#474#0#PHP" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="391">
+          <caret line="59" column="78" lean-forward="true" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
           <folding>
-            <element signature="e#1937#1943#1#HTML" expanded="true" />
-            <element signature="e#2312#2318#1#HTML" expanded="true" />
-            <element signature="e#3187#3193#1#HTML" expanded="true" />
-            <element signature="e#3986#3992#1#HTML" expanded="true" />
-            <element signature="e#4785#4791#1#HTML" expanded="true" />
-            <element signature="e#4878#4884#1#HTML" expanded="true" />
+            <element signature="e#1985#1991#1#HTML" expanded="true" />
+            <element signature="e#2356#2362#1#HTML" expanded="true" />
+            <element signature="e#3058#3064#1#HTML" expanded="true" />
+            <element signature="e#3859#3865#1#HTML" expanded="true" />
+            <element signature="e#4660#4666#1#HTML" expanded="true" />
+            <element signature="e#4753#4759#1#HTML" expanded="true" />
+            <element signature="e#5069#5075#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/images/pies2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/images/pies1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

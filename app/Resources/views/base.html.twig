@@ -23,17 +23,17 @@
             <div id="navigation">
                 <ul>
                     <li><a href="#" class="active">HOME</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">INTERVIEWS</a></li>
-                    <li><a href="#">FEATURES</a></li>
-                    <li><a href="#">OPINIONS</a></li>
-                    <li class="with-dd"> <a href="#">EVENTS</a>
+                    <li><a href="#">ADOPCJA</a></li>
+                    <li><a href="#">ARTYKULY</a></li>
+                    <li><a href="#">TWOJE ZWIERZE</a></li>
+                    <li><a href="#">OPINIE</a></li>
+                    <li class="with-dd"> <a href="#">WYDARZENIA</a>
                         <div>
                             <ul>
-                                <li><a href="#">Category One</a></li>
-                                <li><a href="#">Category Two</a></li>
-                                <li><a href="#">Another Category</a></li>
-                                <li><a href="#">The Last One</a></li>
+                                <li><a href="#">Charytatywne dziaranie</a></li>
+                                <li><a href="#">Miska dla psa</a></li>
+                                <li><a href="#">Stawiamy na łapy - bal dobroczynny</a></li>
+                                <li><a href="#">Wybory najmilszego kota</a></li>
                             </ul>
                         </div>
                     </li>
@@ -42,8 +42,8 @@
                 <div class="cl">&nbsp;</div>
             </div>
             <h1 id="logo"><a href="#">Snuffles</a></h1>
-            <div id="search"> <a href="#">Advanced Search</a>
-                <input type="text" name="string" value="I am looking for..." class="field" />
+            <div id="search"> <a href="#">Wyszukiwarka zwięrząt</a>
+                <input type="text" name="string" value="Szukam..." class="field" />
                 <input type="submit" name="submit" value="Search" class="submit" />
             </div>
             <div class="cl">&nbsp;</div>
@@ -52,7 +52,16 @@
             <div class="slider-holder">
                 <ul>
                     <li>
-                        <div class="image"> <img src="{{ asset('css/images/slide-1.jpg') }}" alt="" /> </div>
+                        <div class="image"> <img src="{{ asset('css/images/kot1.jpg') }}" alt="" /> </div>
+                        <div class="data">
+                            <h3>MEOW!</h3>
+                            <p>Wiecznie uśmiechnięty i zadowolony z życia kotek poszukuje kochającej mamy.</p>
+                            <p>Kot obecnie w domu zastępczym. Nie umie korzystać z kuwety, zaznajomiony z używaniem ludzkiego kibelka.</p>
+                            <a href="#" class="read-more">Read More</a> </div>
+                        <div class="cl">&nbsp;</div>
+                    </li>
+                    <li>
+                        <div class="image"> <img src="{{ asset('css/images/pies1.jpg.jpg') }}" alt="" /> </div>
                         <div class="data">
                             <h3>Owl Yeah!</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.</p>
@@ -61,16 +70,7 @@
                         <div class="cl">&nbsp;</div>
                     </li>
                     <li>
-                        <div class="image"> <img src="{{ asset('css/images/slide-1.jpg') }}" alt="" /> </div>
-                        <div class="data">
-                            <h3>Owl Yeah!</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.</p>
-                            <p>Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo. Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus.</p>
-                            <a href="#" class="read-more">Read More</a> </div>
-                        <div class="cl">&nbsp;</div>
-                    </li>
-                    <li>
-                        <div class="image"> <img src="{{ asset('css/images/slide-1.jpg') }}" alt="" /> </div>
+                        <div class="image"> <img src="{{ asset('css/images/pies2.jpg.jpg') }}" alt="" /> </div>
                         <div class="data">
                             <h3>Owl Yeah!</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.</p>
@@ -83,6 +83,8 @@
             </div>
             <div class="slider-navigation"> <a href="#" class="previous">Previous</a> <a href="#" class="next">Next</a> </div>
         </div>
+
+        {% block body %}{% endblock %}
     </div>
     <div id="footer">
         <div class="footerlink">
@@ -91,7 +93,6 @@
             <div style="clear:both;"></div>
         </div>
     </div>
-        {% block body %}{% endblock %}
     <script type="text/javascript">
         Cufon.now();
     </script>
