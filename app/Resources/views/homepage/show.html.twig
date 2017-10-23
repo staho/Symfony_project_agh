@@ -1,7 +1,41 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
+    <div id="slider">
+        <div class="slider-holder">
+            <ul>
+                <li>
+                    <div class="image"> <img src="{{ asset('css/images/kot1.jpg') }}" alt="" /> </div>
+                    <div class="data">
+                        <h3>MEOW!</h3>
+                        <p>Wiecznie uśmiechnięty i zadowolony z życia kotek poszukuje kochającej mamy.</p>
+                        <p>Kot obecnie w domu zastępczym. Nie umie korzystać z kuwety, zaznajomiony z używaniem ludzkiego kibelka.</p>
+                        <a href="#" class="read-more">Czytaj więcej</a> </div>
+                    <div class="cl">&nbsp;</div>
+                </li>
+                <li>
+                    <div class="image"> <img src="{{ asset('css/images/pies1.jpg') }}" alt="" /> </div>
+                    <div class="data">
+                        <h3>WOW! UKŁON PROSZĘ!</h3>
+                        <p>Wymagający, podniosły i najwyższej klasy dżentelmen poszukuje posłusznej rodziny.</p>
+                        <p>"Ale za kostkę zrobię wszystko!" - bardzo łatwy do przekupienia król podwórka</p>
+                        <a href="#" class="read-more">Czytaj więcej</a> </div>
+                    <div class="cl">&nbsp;</div>
+                </li>
+                <li>
+                    <div class="image"> <img src="{{ asset('css/images/pies2.jpg') }}" alt="" /> </div>
+                    <div class="data">
+                        <h3>CHCĘ SPAC</h3>
+                        <p>Śpioszek ze mnie jakich mało! Lubi opatulać się w ulubiony kocyk i udawać burrito.</p>
+                        <p>Poszukuję domku, nauczony mieszkać w bloku i grzecznie czekać na swojego pana</p>
+                        <a href="#" class="read-more">Czytaj więcej</a> </div>
+                    <div class="cl">&nbsp;</div>
+                </li>
+            </ul>
+            <div class="cl">&nbsp;</div>
+        </div>
+        <div class="slider-navigation"> <a href="#" class="previous">Poprzedni</a> <a href="#" class="next">Następny</a> </div>
+    </div>
     <div id="main">
         <div id="content" class="box">
             <h2>Mauris a tortor ut nassa</h2>

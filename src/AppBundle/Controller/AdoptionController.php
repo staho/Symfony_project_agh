@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: staho
- * Date: 16.10.2017
- * Time: 15:22
+ * Date: 23.10.2017
+ * Time: 23:29
  */
 
 namespace AppBundle\Controller;
@@ -11,15 +11,13 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class AnimalShelterController extends Controller
+class AdoptionController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/adoptions/", name="adoptions")
      */
-
     public function showAction(){
-        return $this->render('homepage/show.html.twig');
-
+        return $this->render('base.html.twig');
     }
 
 }
