@@ -17,7 +17,7 @@ class AdoptionController extends Controller
      * @Route("/adoptions/", name="adoptions")
      */
     public function showAction(){
-        return $this->render('base.html.twig');
+        return $this->render('adoptions/adoptions.html.twig');
     }
 
 }

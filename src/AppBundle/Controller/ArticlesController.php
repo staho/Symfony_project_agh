@@ -17,7 +17,7 @@ class ArticlesController extends Controller
      * @Route("/articles/", name="articles_show")
      */
     public function showAction(){
-        return $this->render('base.html.twig');
+        return $this->render('articles/articles.html.twig');
 
     }
 }

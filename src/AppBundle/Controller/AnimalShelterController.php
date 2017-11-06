@@ -28,9 +28,11 @@ class AnimalShelterController extends Controller
         $mainArticle = json_decode($mainArticleFileRead);
 
 
-        return $this->render('homepage/show.html.twig', array(
-            'arrayOfAnimals' => $carouselArray,
-            'mainArticle' => $mainArticle
+        return $this->render(
+            'homepage/show.html.twig',
+            array(
+                'arrayOfAnimals' => $carouselArray,
+                'mainArticle' => $mainArticle
         ));
     }
     private function generateCarrouselArray(){

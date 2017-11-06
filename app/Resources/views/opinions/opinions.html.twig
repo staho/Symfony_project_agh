@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Opinie{% endblock %}
+
+{% block active_page %}
+    <li><a href="{{ path('homepage') }}">HOME</a></li>
+    <li><a href="{{ path('adoptions') }}" >ADOPCJA</a></li>
+    <li><a href="{{ path('articles_show') }}">ARTYKULY</a></li>
+    <li><a href="{{ path('yourpet') }}">TWOJE ZWIERZE</a></li>
+    <li><a href="{{ path('opinions') }}" class="active">OPINIE</a></li>
+    <li class="with-dd"> <a href="#">WYDARZENIA</a>
+{% endblock %}
+
+
+{% block body %}
+        {% stylesheets '@FOSCommentBundle/Resources/public/css/comments.css' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        {% endstylesheets %}
+        {% javascripts 'js/jquery.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': 'foo'} %}
+{% endblock %}

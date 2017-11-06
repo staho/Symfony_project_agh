@@ -19,7 +19,7 @@ class OpinionsController extends Controller
      */
 
     public function showAction(){
-        return $this->render('base.html.twig');
+        return $this->render('opinions/opinions.html.twig');
     }
 
 }

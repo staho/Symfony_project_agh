@@ -2,6 +2,30 @@
 
 {% block title %}Adopcje{% endblock %}
 
-{% block body %}
+{% block active_page %}
+    <li><a href="{{ path('homepage') }}">HOME</a></li>
+    <li><a href="{{ path('adoptions') }}" class="active">ADOPCJA</a></li>
+    <li><a href="{{ path('articles_show') }}">ARTYKULY</a></li>
+    <li><a href="{{ path('yourpet') }}">TWOJE ZWIERZE</a></li>
+    <li><a href="{{ path('opinions') }}">OPINIE</a></li>
+    <li class="with-dd"> <a href="#">WYDARZENIA</a>
+{% endblock %}
 
+{% block body %}
+<div id="main">
+    <div class="box1">
+        <h2>SIEMA</h2>
+        <div class="box-image-bigger"> <img src="{{ asset('css/images/box-image-1.jpg') }}" alt="" /> </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
+        <p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
+        <a href="#" class="read-more">Czytaj dalej</a>
+    </div>
+    <div class="box1">
+        <h2>SIEMA</h2>
+        <div class="box-image-bigger"> <img src="{{ asset('css/images/box-image-1.jpg') }}" alt="" /> </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
+        <p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
+        <a href="#" class="read-more">Czytaj dalej</a>
+    </div>
+</div>
 {% endblock %}
