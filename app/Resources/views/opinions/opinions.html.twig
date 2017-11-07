@@ -2,13 +2,8 @@
 
 {% block title %}Opinie{% endblock %}
 
-{% block active_page %}
-    <li><a href="{{ path('homepage') }}">HOME</a></li>
-    <li><a href="{{ path('adoptions') }}" >ADOPCJA</a></li>
-    <li><a href="{{ path('articles_show') }}">ARTYKULY</a></li>
-    <li><a href="{{ path('yourpet') }}">TWOJE ZWIERZE</a></li>
-    <li><a href="{{ path('opinions') }}" class="active">OPINIE</a></li>
-    <li class="with-dd"> <a href="#">WYDARZENIA</a>
+{% block opinions_active %}
+class="active"
 {% endblock %}
 
 
