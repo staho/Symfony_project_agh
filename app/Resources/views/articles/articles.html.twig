@@ -2,14 +2,7 @@
 
 {% block title %}Articles{% endblock %}
 
-{% block active_page %}
-    <li><a href="{{ path('homepage') }}">HOME</a></li>
-    <li><a href="{{ path('adoptions') }}" >ADOPCJA</a></li>
-    <li><a href="{{ path('articles_show') }}" class="active">ARTYKULY</a></li>
-    <li><a href="{{ path('yourpet') }}">TWOJE ZWIERZE</a></li>
-    <li><a href="{{ path('opinions') }}">OPINIE</a></li>
-    <li class="with-dd"> <a href="#">WYDARZENIA</a>
-{% endblock %}
+{% block articles_active %}class="active"{% endblock %}
 
 {% block body %}
 

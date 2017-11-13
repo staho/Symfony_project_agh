@@ -22,14 +22,12 @@
         <div id="header">
             <div id="navigation">
                 <ul>
-                    {% block active_page %}
-                        <li><a href="{{ path('homepage') }}" class="active">HOME</a></li>
-                        <li><a href="{{ path('adoptions') }}">ADOPCJA</a></li>
-                        <li><a href="{{ path('articles_show') }}">ARTYKULY</a></li>
-                        <li><a href="{{ path('yourpet') }}">TWOJE ZWIERZE</a></li>
-                        <li><a href="{{ path('opinions') }}">OPINIE</a></li>
-                        <li class="with-dd"> <a href="#">WYDARZENIA</a>
-                     {% endblock %}
+                        <li><a href="{{ path('homepage') }}" {% block homepage_active %}{% endblock %} >HOME</a></li>
+                        <li><a href="{{ path('adoptions') }}" {% block adoptions_active %}{% endblock %}>ADOPCJA</a></li>
+                        <li><a href="{{ path('articles_show') }}" {% block articles_active %}{% endblock %}>ARTYKULY</a></li>
+                        <li><a href="{{ path('yourpet') }}"{% block yourpet_active %}{% endblock %}>TWOJE ZWIERZE</a></li>
+                        <li><a href="{{ path('opinions') }}"{% block opinions_active %}{% endblock %}>OPINIE</a></li>
+                      <li class="with-dd"> <a href="#" {% block events_active %}{% endblock %}>WYDARZENIA</a>
                         <div>
                             <ul>
                                 <li><a href="#">Charytatywne dziaranie</a></li>
