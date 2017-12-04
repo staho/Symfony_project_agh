@@ -6,19 +6,14 @@
 
 {% block body %}
 <div id="main">
-    <div class="box1">
-        <h2>SIEMA</h2>
-        <div class="box-image-bigger"> <img src="{{ asset('css/images/box-image-1.jpg') }}" alt="" /> </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
-        <p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
-        <a href="#" class="read-more">Czytaj dalej</a>
-    </div>
-    <div class="box1">
-        <h2>SIEMA</h2>
-        <div class="box-image-bigger"> <img src="{{ asset('css/images/box-image-1.jpg') }}" alt="" /> </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
-        <p class="last">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.</p>
-        <a href="#" class="read-more">Czytaj dalej</a>
-    </div>
+    {% for animal in hlArray %}
+        <div class="box1">
+            <h2>{{ animal.title }}</h2>
+            <div class="box-image-bigger"> <img src="{{ asset(animal.image) }}" alt="" /> </div>
+            <p>{{ animal.desc1 }}</p>
+            <p class="last">{{ animal.desc2 }}</p>
+            <a href="#" class="read-more">Czytaj dalej</a>
+        </div>
+    {% endfor %}
 </div>
 {% endblock %}

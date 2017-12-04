@@ -27,7 +27,13 @@
                         <li><a href="{{ path('articles_show') }}" {% block articles_active %}{% endblock %}>ARTYKULY</a></li>
                         <li><a href="{{ path('yourpet') }}"{% block yourpet_active %}{% endblock %}>TWOJE ZWIERZE</a></li>
                         <li><a href="{{ path('opinions') }}"{% block opinions_active %}{% endblock %}>OPINIE</a></li>
-                        <li><a href="/login"{% block login_active %}{% endblock %}>LOGIN</a></li>
+                        <li class="with-dd"><a href="/login"{% block login_active %}{% endblock %}>LOGIN</a>
+                            <div>
+                                <ul>
+                                    <li><a href="/register">REJESTRACJA</a></li>
+                                    <li><a href="/resetting">Przypomnij hasło</a></li>
+                                </ul>
+                            </div></li>
                       <li class="with-dd"> <a href="#" {% block events_active %}{% endblock %}>WYDARZENIA</a>
                         <div>
                             <ul>
@@ -42,7 +48,7 @@
                 <a href="#" class="rss">RSS</a>
                 <div class="cl">&nbsp;</div>
             </div>
-            <h1 id="logo"><a href="#">Snuffles</a></h1>
+            <h1 id="logo"><a href="{{ path('homepage') }}">Snuffles</a></h1>
             <div id="search"> <a href="#">Wyszukiwarka zwięrząt</a>
                 <input type="text" name="string" value="Szukam..." class="field" />
                 <input type="submit" name="submit" value="Search" class="submit" />

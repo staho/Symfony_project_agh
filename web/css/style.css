@@ -327,7 +327,8 @@ h3 {
 	border:2px solid #e4e8db;
 	display:inline;
 	margin-right:11px;
-	height:100px;
+	height:120px;
+	width: 120px;
 	overflow:hidden;
 	margin-top:4px;
 }

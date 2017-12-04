@@ -35,34 +35,4 @@ class AnimalShelterController extends Controller
                 'mainArticle' => $mainArticle
         ));
     }
-    private function generateCarrouselArray(){
-        $animal1 = array(
-            'image' => 'css/images/kot1.jpg',
-            'title' => 'MEOW!',
-            'desc1' => 'Wiecznie uśmiechnięty i zadowolony z życia kotek poszukuje kochającej mamy.',
-            'desc2' => 'Kot obecnie w domu zastępczym. Nie umie korzystać z kuwety, zaznajomiony z używaniem ludzkiego kibelka.',
-            'link' => '#');
-
-        $arrayOfAnimals = array(
-            $animal1,
-        );
-
-        return $arrayOfAnimals;
-    }
-    private function generateMainArticle(){
-        $title = 'Kot domowy niewychodzący – jak się nim opiekować?';
-        $desc1 = 'Choć w dzisiejszych czasach coraz większa liczba kotów trzymana jest wyłącznie w domu, wielu osobom takie postępowanie wydaje się niewłaściwe. Czy rzeczywiście kot w domu jest narażony na mniej niebezpieczeństw? Jak dbać o kota domowego, by jak najdłużej cieszył się dobrym zdrowiem?';
-        $desc2 = 'Koty bywają wypuszczane na zewnątrz z różnych powodów. Niektórzy właściciele są przekonani, że bez możliwości wychodzenia ich kot nie będzie w pełni szczęśliwy...';
-        $ref = "https://royalcanin.pl/blog/kot-domowy-niewychodzacy-jak-sie-nim-opiekowac/";
-
-        $mainArticle = array(
-            'title' => $title,
-            'desc1' => $desc1,
-            'desc2' => $desc2,
-            'ref' => $ref
-        );
-
-        return $mainArticle;
-    }
-
 }
