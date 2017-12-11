@@ -19,6 +19,7 @@ class AnimalShelterController extends Controller
 
     public function showAction(){
 
+
         $carouselFile = fopen($_SERVER['DOCUMENT_ROOT'].'/pagecontent/homepage/carousel.txt', "r");
         $carouselFileRead = fread($carouselFile, filesize($_SERVER['DOCUMENT_ROOT'].'/pagecontent/homepage/carousel.txt'));
         $carouselArray = json_decode($carouselFileRead);

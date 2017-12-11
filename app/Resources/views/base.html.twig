@@ -27,11 +27,15 @@
                         <li><a href="{{ path('articles_show') }}" {% block articles_active %}{% endblock %}>ARTYKULY</a></li>
                         <li><a href="{{ path('yourpet') }}"{% block yourpet_active %}{% endblock %}>TWOJE ZWIERZE</a></li>
                         <li><a href="{{ path('opinions') }}"{% block opinions_active %}{% endblock %}>OPINIE</a></li>
-                        <li class="with-dd"><a href="/login"{% block login_active %}{% endblock %}>LOGIN</a>
+                        {% if is_granted('ROLE_USER') %}
+                        <li class="with-dd"><a href="{{ path('fos_user_security_logout') }}">WYLOGUJ</a>
+                            {% else %}
+                         <li class="with-dd"><a href="{{ path('fos_user_security_login') }}"{% block login_active %}{% endblock %}>LOGIN</a>
+                          {% endif %}
                             <div>
                                 <ul>
-                                    <li><a href="/register">REJESTRACJA</a></li>
-                                    <li><a href="/resetting">Przypomnij hasło</a></li>
+                                    <li><a href="{{ path('fos_user_registration_register') }}">REJESTRACJA</a></li>
+                                    <li><a href="{{ path('fos_user_change_password') }}">Przypomnij hasło</a></li>
                                 </ul>
                             </div></li>
                       <li class="with-dd"> <a href="#" {% block events_active %}{% endblock %}>WYDARZENIA</a>
