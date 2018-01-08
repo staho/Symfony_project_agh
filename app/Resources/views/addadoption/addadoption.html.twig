@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block adoptions_active %} class="active" {% endblock %}
+
+{% block body %}
+    <div id="main">
+        <h1>Dodaj zwierzę do adopcji</h1>
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

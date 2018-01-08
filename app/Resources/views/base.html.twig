@@ -23,9 +23,20 @@
             <div id="navigation">
                 <ul>
                         <li><a href="{{ path('homepage') }}" {% block homepage_active %}{% endblock %} >HOME</a></li>
-                        <li><a href="{{ path('adoptions') }}" {% block adoptions_active %}{% endblock %}>ADOPCJA</a></li>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li class="with-dd">
+                                <a href="{{ path('adoptions') }}">ADOPCJA</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="{{ path('add_adoption') }}">Dodaj</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        {% else %}
+                            <li><a href="{{ path('adoptions') }}" {% block adoptions_active %}{% endblock %}>ADOPCJA</a></li>
+                        {% endif %}
                         <li><a href="{{ path('articles_show') }}" {% block articles_active %}{% endblock %}>ARTYKULY</a></li>
-                        <li><a href="{{ path('yourpet') }}"{% block yourpet_active %}{% endblock %}>TWOJE ZWIERZE</a></li>
+                        <li><a href="{{ path('fos_user_profile_show') }}"{% block yourpet_active %}{% endblock %}>TWOJE KONTO</a></li>
                         <li><a href="{{ path('opinions') }}"{% block opinions_active %}{% endblock %}>OPINIE</a></li>
                         {% if is_granted('ROLE_USER') %}
                         <li class="with-dd"><a href="{{ path('fos_user_security_logout') }}">WYLOGUJ</a>
@@ -49,14 +60,9 @@
                         </div>
                     </li>
                 </ul>
-                <a href="#" class="rss">RSS</a>
                 <div class="cl">&nbsp;</div>
             </div>
             <h1 id="logo"><a href="{{ path('homepage') }}">Snuffles</a></h1>
-            <div id="search"> <a href="#">Wyszukiwarka zwięrząt</a>
-                <input type="text" name="string" value="Szukam..." class="field" />
-                <input type="submit" name="submit" value="Search" class="submit" />
-            </div>
             <div class="cl">&nbsp;</div>
         </div>
 

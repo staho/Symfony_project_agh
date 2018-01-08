@@ -25,8 +25,11 @@
         "doctrine/orm": "^2.5",
         "friendsofsymfony/comment-bundle": "^2.0",
         "friendsofsymfony/user-bundle": "~2.0",
+        "fzaninotto/faker": "^1.7",
         "incenteev/composer-parameter-handler": "^2.0",
+        "javiereguiluz/easyadmin-bundle": "^1.17",
         "knplabs/knp-markdown-bundle": "^1.5",
+        "knplabs/knp-paginator-bundle": "^2.7",
         "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^3.0.2",
         "symfony/monolog-bundle": "^3.1.0",
@@ -36,6 +39,7 @@
         "twig/twig": "^1.0||^2.0"
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },

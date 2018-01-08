@@ -8,50 +8,54 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Entity\AnimalPost;
+use AppBundle\Form\Entity\AnimalPostType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class AdoptionController extends Controller
 {
     /**
-     * @Route("/adoptions/", name="adoptions")
+     * @Route("/adoptions/{id}", name="adoption_show")
      */
-    public function showAction(){
-        $this->saveHighlights();
-        $hlArray = $this->readHighlights();
-        return $this->render('adoptions/adoptions.html.twig', array(
-            'hlArray' => $hlArray
+    public function showAction(AnimalPost $post){
+        return $this->render('adoption/adoption.html.twig', array(
+            'post' => $post
         ));
     }
 
-    private function saveHighlights(){
+    /**
+     * @Route("/adoptions/", name="adoptions")
+     */
+    public function indexAction(Request $request){
+        $posts = $this->getDoctrine()
+            ->getManager()
+            ->createQueryBuilder()
+            ->from('AppBundle:Entity\AnimalPost', 'p')
+            ->select('p');
 
-        $array = array("title" => "Piesek Leszek",
-            "desc1" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.",
-            "desc2" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.",
-            "link" => "leszek420",
-            "image" => "css/images/imageshl/pies.jpg");
-        $array1 = array("title" => "Acapulco",
-            "desc1" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.",
-            "desc2" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum, neque ut imperdiet pellentesque, nulla tellus tempus magna, sed consectetur orci metus a justo.etur orci metus a justo. Aliquam ac congue nunc.",
-            "link" => "acapulco069",
-            "image" => "css/images/imageshl/pies2.jpg");
-        $arrays = array($array, $array1);
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $posts,
+            $request->query->get('page', 1),
+            5
+        );
 
-        $highlights = json_encode($arrays);
-        $adoptionHighlights = fopen($_SERVER['DOCUMENT_ROOT'].'/pagecontent/adoptionhighlights/highlights.txt', "w");
-        $bufor = fwrite($adoptionHighlights, $highlights);
-
-
+        return $this->render('adoptions/adoptions.html.twig', array(
+            'posts' => $pagination
+            ));
     }
 
-    private function readHighlights(){
+    /**
+     * @Route("/adoptions/add", name="add_adoption")
+     */
+    public function showActionAdd(){
+        $form = $this->createForm(new AnimalPostType());
 
-        $file = fopen($_SERVER['DOCUMENT_ROOT'].'/pagecontent/adoptionhighlights/highlights.txt', "r");
-        $filebuf = fread($file, filesize($_SERVER['DOCUMENT_ROOT'].'/pagecontent/adoptionhighlights/highlights.txt'));
-        $hlArray = json_decode($filebuf);
-
-        return $hlArray;
+        return $this->render('addadoption/addadoption.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 
 

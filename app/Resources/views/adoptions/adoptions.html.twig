@@ -6,14 +6,17 @@
 
 {% block body %}
 <div id="main">
-    {% for animal in hlArray %}
+    {% for animal in posts %}
         <div class="box1">
             <h2>{{ animal.title }}</h2>
-            <div class="box-image-bigger"> <img src="{{ asset(animal.image) }}" alt="" /> </div>
-            <p>{{ animal.desc1 }}</p>
-            <p class="last">{{ animal.desc2 }}</p>
-            <a href="#" class="read-more">Czytaj dalej</a>
+            <div class="box-image-bigger"> <img src="{{ animal.picture }}" alt="" /> </div>
+            <p>{{ animal.description }}</p>
+            <a href="{{ path('adoption_show', {'id': animal.id}) }}" class="read-more">Czytaj dalej</a>
         </div>
+
     {% endfor %}
+    <div class="navigation">
+        {{ knp_pagination_render(posts) }}
+    </div>
 </div>
 {% endblock %}

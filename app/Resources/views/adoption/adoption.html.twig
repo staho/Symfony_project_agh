@@ -5,5 +5,12 @@
 {% block adoptions_active %} class="active" {% endblock %}
 
 {% block body %}
+    <div id="main">
+        <h1>{{ post.title }}</h1>
+        <div>
+            <p>{{ post.description }}</p>
 
+            <span class="pull-right">Dodano: {{ post.createdAt | date("H:i d/m/Y") }}</span>
+        </div>
+    </div>
 {% endblock %}
