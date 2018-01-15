@@ -92,9 +92,20 @@ fos_user:
 
 easy_admin:
     entities:
-        - AppBundle\Entity\User
-        - AppBundle\Entity\Entity\AnimalPost
-        - AppBundle\Entity\Reservation
+        AnimalPost:
+            class: AppBundle\Entity\Entity\AnimalPost
+            form:
+                fields:
+                    - title
+                    - description
+                    - { property: 'logoFile', type: 'file', label: 'Upload image', help: 'Select file to upload image' }
+                    - castration
+                    - vaccination
+                    - createdAt
+        User:
+            class: AppBundle\Entity\User
+        Reservation:
+            class: AppBundle\Entity\Reservation
 
 knp_paginator:
     page_range: 5                       # number of links showed in the pagination menu (e.g: you have 10 pages, a page_range of 3, on the 5th page you'll see links to page 4, 5, 6)
@@ -109,3 +120,11 @@ knp_paginator:
         pagination: '@KnpPaginator/Pagination/sliding.html.twig'     # sliding pagination controls template
         sortable: '@KnpPaginator/Pagination/sortable_link.html.twig' # sort link template
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
+
+vich_uploader:
+    db_driver: orm # or mongodb or propel or phpcr
+
+    mappings:
+        customer_image:
+            uri_prefix:         /images/posts
+            upload_destination: %kernel.root_dir%/../web/images/posts

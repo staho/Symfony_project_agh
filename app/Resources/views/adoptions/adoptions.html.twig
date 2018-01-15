@@ -9,7 +9,11 @@
     {% for animal in posts %}
         <div class="box1">
             <h2>{{ animal.title }}</h2>
-            <div class="box-image-bigger"> <img src="{{ animal.picture }}" alt="" /> </div>
+            {% if 'http' in animal.picture %}
+                <div class="box-image-bigger"> <img src="{{ animal.picture }}" alt="" /> </div>
+            {% else %}
+                <div class="box-image-bigger"> <img src="/images/posts/{{ animal.picture }}" alt="" /> </div>
+            {% endif %}
             <p>{{ animal.description }}</p>
             <a href="{{ path('adoption_show', {'id': animal.id}) }}" class="read-more">Czytaj dalej</a>
         </div>

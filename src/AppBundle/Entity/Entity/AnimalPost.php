@@ -3,12 +3,18 @@
 namespace AppBundle\Entity\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * AnimalPost
  *
  * @ORM\Table(name="entity_animal_post")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\Entity\AnimalPostRepository")
+ *
+ * @Vich\Uploadable()
  */
 class AnimalPost
 {
@@ -59,6 +65,8 @@ class AnimalPost
     /**
      * @var \DateTime
      *
+     * @Gedmo\Timestampable(on="create")
+     *
      * @ORM\Column(name="created_at", type="datetime")
      */
     private $createdAt;
@@ -70,6 +78,13 @@ class AnimalPost
      */
     private $reservations;
 
+    /**
+     * @Vich\UploadableField(mapping="customer_image", fileNameProperty="picture")
+     *
+     * @var File $logoFile
+     */
+    protected $logoFile;
+
 
     /**
      * Get id
@@ -79,6 +94,29 @@ class AnimalPost
     public function getId()
     {
         return $this->id;
+    }
+
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     */
+    public function setLogoFile(File $image = null)
+    {
+        $this->logoFile = $image;
+
+        if ($image) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    /**
+     * @return File
+     */
+    public function getLogoFile()
+    {
+        return $this->logoFile;
     }
 
     /**
