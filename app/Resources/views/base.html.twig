@@ -47,6 +47,10 @@
                                 <ul>
                                     <li><a href="{{ path('fos_user_registration_register') }}">REJESTRACJA</a></li>
                                     <li><a href="{{ path('fos_user_change_password') }}">Przypomnij hasło</a></li>
+                                    {% if is_granted("ROLE_ADMIN") %}
+                                    <li><a href="{{ path('easyadmin') }}">Zarządzaj</a></li>
+                                    {% endif %}
+
                                 </ul>
                             </div></li>
                       <li class="with-dd"> <a href="#" {% block events_active %}{% endblock %}>WYDARZENIA</a>
