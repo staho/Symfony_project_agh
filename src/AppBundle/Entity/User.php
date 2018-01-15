@@ -23,6 +23,13 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Reservation", mappedBy="user")
+     */
+    private $reservations;
+
     public function __construct()
     {
         parent::__construct();

@@ -63,6 +63,13 @@ class AnimalPost
      */
     private $createdAt;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Reservation", mappedBy="animalPost")
+     */
+    private $reservations;
+
 
     /**
      * Get id
@@ -214,5 +221,7 @@ class AnimalPost
     {
         return $this->createdAt;
     }
+
+
 }
 

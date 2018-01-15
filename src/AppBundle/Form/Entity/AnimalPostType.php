@@ -17,8 +17,8 @@ class AnimalPostType extends AbstractType
             ->add('title')
             ->add('description')
             ->add('castration')
-            ->add('vaccination')
-            ->add('createdAt');
+            ->add('vaccination');
+            //->add('createdAt');
     }
     
     /**

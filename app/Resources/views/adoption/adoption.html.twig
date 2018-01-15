@@ -8,9 +8,21 @@
     <div id="main">
         <h1>{{ post.title }}</h1>
         <div>
+            <img class="pull-left" src="{{ post.picture }}" alt="" />
             <p>{{ post.description }}</p>
+
 
             <span class="pull-right">Dodano: {{ post.createdAt | date("H:i d/m/Y") }}</span>
         </div>
+        {% if is_granted("ROLE_USER") %}
+            <div>
+                <h3>Rezerwuj</h3>
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <button>Dodaj post</button>
+                {{ form_end(form) }}
+            </div>
+        {% endif %}
+
     </div>
 {% endblock %}
