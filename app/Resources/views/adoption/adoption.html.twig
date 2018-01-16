@@ -8,12 +8,24 @@
     <div id="main">
         <h1>{{ post.title }}</h1>
         <div>
-            {% if 'http' in animal.picture %}
+            {% if 'http' in post.picture %}
                 <img class="pull-left" src="{{ post.picture }}" alt="" />
             {% else %}
                 <img class="pull-left" src="/images/posts/{{ post.picture }}" alt="" />
             {% endif %}
             <p>{{ post.description }}</p>
+
+
+            <table>
+                <tr>
+                    <th>Szczepenia</th>
+                    <th>Kastracja</th>
+                </tr>
+                <tr>
+                    <td>{% if post.vaccination %} ✅ {% else %} ❌ {% endif %}</td>
+                    <td>{% if post.castration %} ✅ {% else %} ❌ {% endif %}</td>
+                </tr>
+            </table>
 
 
             <span class="pull-right">Dodano: {{ post.createdAt | date("H:i d/m/Y") }}</span>
@@ -26,6 +38,8 @@
                     <button>Dodaj post</button>
                 {{ form_end(form) }}
             </div>
+        {% else %}
+            <h3>Zaloguj się aby dokonać rezerwacji</h3>
         {% endif %}
 
     </div>
